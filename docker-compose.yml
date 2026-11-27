@@ -1,0 +1,9 @@
+services:
+  web-jastip:
+    image: nginx:alpine
+    container_name: web-jastip
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
